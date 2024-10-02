@@ -1,0 +1,121 @@
+/* static/parser_app/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:whitesmoke; /* Light gray background */
+}
+
+h1, h2 {
+    color: #343a40; /* Dark gray text */
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase; /* Uppercase titles */
+}
+
+form {
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 20px auto;
+    border: 2px solid #007bff; /* Blue border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #6c757d; /* Gray border */
+    border-radius: 4px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border: 2px solid #007bff; /* Focus border color */
+    outline: none;
+    background-color: #f0f9ff; /* Light blue background on focus */
+}
+
+button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Rounded corners for overflowing content */
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6; /* Light gray border between items */
+    transition: background-color 0.3s ease;
+}
+
+li:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+li:hover {
+    background-color: #f8f9fa; /* Light hover effect */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker link color on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1, h2, form, ul {
+    animation: fadeIn 0.5s ease forwards; /* Fade-in effect for elements */
+}
+
+@media (max-width: 600px) {
+    form, ul {
+        width: 90%; /* Responsive form and list width */
+    }
+}

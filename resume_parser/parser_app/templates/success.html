@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Parsed</title>
+    {% load static %}  <!-- Make sure to load static here -->
+    <link rel="stylesheet" type="text/css" href="{% static 'parser_app/styles.css' %}">  <!-- Correct the type -->
+</head>
+<body>
+    <h2>Resume Data</h2>
+    <ul>
+        <li>Name: {{ resume_data.name }}</li>
+        <li>Email: {{ resume_data.email }}</li>
+        <li>Mobile Number: {{ resume_data.mobile_number }}</li>
+        <li>LinkedIn: {{ resume_data.linkedin_link }}</li>
+        <li>Education: {{ resume_data.education }}</li>
+        <li>Experience: {{ resume_data.experience }}</li>
+        <li>Skills: {{ resume_data.skills }}</li>
+    </ul>
+    <a href="{% url 'upload_resume' %}">Upload Another Resume</a>
+</body>
+</html>
